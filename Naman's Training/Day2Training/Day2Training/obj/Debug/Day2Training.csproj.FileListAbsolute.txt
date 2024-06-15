@@ -1,0 +1,7 @@
+D:\Naman's Training\Day2Training\Day2Training\bin\Debug\Day2Training.exe.config
+D:\Naman's Training\Day2Training\Day2Training\bin\Debug\Day2Training.exe
+D:\Naman's Training\Day2Training\Day2Training\bin\Debug\Day2Training.pdb
+D:\Naman's Training\Day2Training\Day2Training\obj\Debug\Day2Training.csproj.CoreCompileInputs.cache
+D:\Naman's Training\Day2Training\Day2Training\obj\Debug\Day2Training.exe
+D:\Naman's Training\Day2Training\Day2Training\obj\Debug\Day2Training.pdb
+D:\Naman's Training\Day2Training\Day2Training\obj\Debug\Day2Training.csproj.AssemblyReference.cache

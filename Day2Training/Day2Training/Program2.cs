@@ -2,7 +2,7 @@
 
 class Program2
 {
-    static void check()
+    public static void checkPositive()
     {
         Console.WriteLine("Enter a number:");
         int number = int.Parse(Console.ReadLine());
@@ -19,5 +19,6 @@ class Program2
         {
             Console.WriteLine("The number is zero.");
         }
+        Console.ReadLine();
     }
 }

@@ -2,7 +2,7 @@
 
 class Program3
 {
-    static void Main()
+   public static void Number()
     {
         Console.WriteLine("Enter the first number:");
         double num1 = double.Parse(Console.ReadLine());
@@ -11,9 +11,12 @@ class Program3
         double addition = num1 + num2;
         double subtraction = num1 - num2;
         double multiplication = num1 * num2;
+        double division = num1 / num2;
         Console.WriteLine($"Addition result: {num1} + {num2} = {addition}");
         Console.WriteLine($"Subtraction result: {num1} - {num2} = {subtraction}");
         Console.WriteLine($"Multiplication result: {num1} * {num2} = {multiplication}");
         Console.WriteLine($"Division result: {num1} / {num2} = {division}");
+        Console.ReadLine();
     }
+   
 }

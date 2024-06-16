@@ -46,6 +46,8 @@
     <Compile Include="Program2.cs" />
     <Compile Include="Program1.cs" />
     <Compile Include="Program3.cs" />
+    <Compile Include="Program4.cs" />
+    <Compile Include="Program5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

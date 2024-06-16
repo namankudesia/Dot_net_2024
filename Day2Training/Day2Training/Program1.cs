@@ -21,6 +21,8 @@ class Program
 
         Program2.checkPositive();
         Program3.Number();
+        Program4.swap();
+        Program5.Row();
     }
 }
 

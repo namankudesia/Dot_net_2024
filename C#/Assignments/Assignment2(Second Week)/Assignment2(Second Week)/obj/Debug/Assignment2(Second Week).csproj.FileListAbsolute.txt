@@ -1,0 +1,7 @@
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\obj\Debug\Assignment2(Second Week).csproj.AssemblyReference.cache
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\obj\Debug\Assignment2(Second Week).csproj.CoreCompileInputs.cache
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\bin\Debug\Assignment2(Second Week).exe.config
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\bin\Debug\Assignment2(Second Week).exe
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\bin\Debug\Assignment2(Second Week).pdb
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\obj\Debug\Assignment2(Second Week).exe
+D:\Naman's Training\Assignments\Assignment2(Second Week)\Assignment2(Second Week)\obj\Debug\Assignment2(Second Week).pdb

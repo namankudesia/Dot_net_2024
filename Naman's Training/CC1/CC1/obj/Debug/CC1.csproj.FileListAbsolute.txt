@@ -1,7 +1,0 @@
-D:\Naman's Training\CC1\CC1\bin\Debug\CC1.exe.config
-D:\Naman's Training\CC1\CC1\bin\Debug\CC1.exe
-D:\Naman's Training\CC1\CC1\bin\Debug\CC1.pdb
-D:\Naman's Training\CC1\CC1\obj\Debug\CC1.csproj.AssemblyReference.cache
-D:\Naman's Training\CC1\CC1\obj\Debug\CC1.csproj.CoreCompileInputs.cache
-D:\Naman's Training\CC1\CC1\obj\Debug\CC1.exe
-D:\Naman's Training\CC1\CC1\obj\Debug\CC1.pdb

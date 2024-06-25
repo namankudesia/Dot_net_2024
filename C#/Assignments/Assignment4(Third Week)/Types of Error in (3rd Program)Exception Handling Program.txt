@@ -1,0 +1,8 @@
+Checked Exceptions
+1. Argument Exception
+2. Insufficient Balance Exception
+                                                     
+
+Unchecked Exceptions
+1.Format Exception 
+2.Overflow Exception

@@ -1,0 +1,7 @@
+D:\Naman's Training\C#\Assesments\CC3\CC3\bin\Debug\CC3.exe.config
+D:\Naman's Training\C#\Assesments\CC3\CC3\bin\Debug\CC3.exe
+D:\Naman's Training\C#\Assesments\CC3\CC3\bin\Debug\CC3.pdb
+D:\Naman's Training\C#\Assesments\CC3\CC3\obj\Debug\CC3.csproj.AssemblyReference.cache
+D:\Naman's Training\C#\Assesments\CC3\CC3\obj\Debug\CC3.csproj.CoreCompileInputs.cache
+D:\Naman's Training\C#\Assesments\CC3\CC3\obj\Debug\CC3.exe
+D:\Naman's Training\C#\Assesments\CC3\CC3\obj\Debug\CC3.pdb

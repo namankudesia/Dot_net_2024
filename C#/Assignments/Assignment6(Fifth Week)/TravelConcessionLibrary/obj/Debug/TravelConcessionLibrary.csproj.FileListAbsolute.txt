@@ -1,6 +1,0 @@
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\TravelConcessionLibrary\bin\Debug\TravelConcessionLibrary.dll
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\TravelConcessionLibrary\bin\Debug\TravelConcessionLibrary.pdb
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\TravelConcessionLibrary\obj\Debug\TravelConcessionLibrary.csproj.AssemblyReference.cache
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\TravelConcessionLibrary\obj\Debug\TravelConcessionLibrary.csproj.CoreCompileInputs.cache
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\TravelConcessionLibrary\obj\Debug\TravelConcessionLibrary.dll
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\TravelConcessionLibrary\obj\Debug\TravelConcessionLibrary.pdb

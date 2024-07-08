@@ -1,7 +1,0 @@
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\bin\Debug\Assignments6(Fifth Week).exe.config
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\bin\Debug\Assignments6(Fifth Week).exe
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\bin\Debug\Assignments6(Fifth Week).pdb
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\obj\Debug\Assignments6(Fifth Week).csproj.AssemblyReference.cache
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\obj\Debug\Assignments6(Fifth Week).csproj.CoreCompileInputs.cache
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\obj\Debug\Assignments6(Fifth Week).exe
-D:\Naman's Training\C#\Assignments\Assignments6(Fifth Week)\Assignments6(Fifth Week)\obj\Debug\Assignments6(Fifth Week).pdb

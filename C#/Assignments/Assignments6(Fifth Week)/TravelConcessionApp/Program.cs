@@ -19,18 +19,13 @@ namespace TravelConcessionApp
                 Console.WriteLine("Invalid age entered.");
                 return;
             }
-
-            // Create an instance of TravelTicket
             var ticket = new TravelConcessionLibrary.TravelTicket
             {
                 Name = name,
                 Age = age
             };
-
-            // Calculate and display the concession
             string concessionMessage = ticket.CalculateConcession();
             Console.WriteLine(concessionMessage);
-
             Console.ReadLine();
         }
     }

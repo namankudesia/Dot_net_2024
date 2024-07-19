@@ -1,0 +1,107 @@
+Create database namankudesisa_assignment4
+using namankudesisa_assignment4
+
+--Q.1 Write a T-SQL Program to find the factorial of a given number.
+
+--declaring and setting the values to calculate factorial of a number
+begin
+declare @i int
+set @i = 1
+declare @result int
+set @result = 1
+declare @number int
+set @number = 10
+--performing the loop operation
+while @i <= @number 
+begin
+set @result = @result * @i
+set @i = @i + 1
+End
+--printing the result/factorial of given number
+print 'Factorial of given number is:' + cast(@result as varchar(10))
+End
+
+
+--Q.2 
+--Create a stored procedure to generate multiplication tables up to a given number.
+Create or alter procedure Generate_Multiplication_Table
+ @number int
+as
+Begin
+--Declaring the variables to hold the multiplier and multiplicand
+Declare @m int --Multiplier
+set @m = 1
+Declare @n int  --Multiplicand
+--creating table to store the multiplication table
+Create table #Multiplication_Table1(Multiplicand int,Multiplier int,Result int)
+--Loop through each multiplier up to maximum number
+while @m <= @Number
+begin
+set @n = 1
+----Loop through each multiplicand up to 10
+while @n <= 10 
+begin
+-inserting values/multiplication into table
+Insert into #Multiplication_Table1(Multiplicand ,Multiplier ,Result)
+values(@m, @n, @m * @n)
+--increament the multiplicand
+set @n = @n + 1
+end 
+--increament the multiplier
+set @m = @m +1
+end
+Select * from #Multiplication_Table1
+End
+--To excute the above procedure
+exec Generate_Multiplication_Table @Number = 10
+
+
+
+
+
+--Q.3 Create a trigger to restrict data manipulation on EMP table during General holidays.
+--Display the error message like “Due to Independence day you cannot manipulate data” or "Due To Diwali", 
+--you cannot manupulate" etc.
+--Note: Create holiday table as (holiday_date,Holiday_name) store at least 4 holiday details.
+--try to match and stop manipulation 
+--Creating Employee table
+Create table Employee(Emp_no numeric(7), Emp_Name varchar(30), Job varchar(35),
+Salary numeric, Joining_date date)
+--inserting values into Employee table
+Insert into Employee
+values(100,'Naman Kudesia','Developer',200000,'2024-05-30'),
+(101,'Umang Patel','Developer',30000,'2022-07-12'),
+(102,'Utkarsh Singh','Tester',15000,'2023-11-18'),
+(103,'Chandra Bhushan Shukla','Analyst',80000,'2024-01-13'),
+(104,'Aditya Singh','Project Manager',100000,'2018-07-09'),
+(105,'Madhur Nigam','Designer',10000,'2021-09-10')
+Select * from Employee 
+--Creating Holiday Table
+Create table Holiday(H_date date, H_name varchar(20))
+--Inserting values in Holiday Table
+Insert into Holiday values('2024-01-01', 'New Year'),('2024-01-26', 'Republic Day'),
+('2024-08-15', 'Independence Day'),('2024-11-01','Diwali')
+--inserting values in table for checking the trigger if working properly or not
+insert into Holiday values ('2024-03-25','Monday')
+insert into Holiday values ('2024-03-26','Tuesday')
+select * from Holiday
+--Creating a trigger to restrict data manipulation on EMP table during General holidays.
+create or alter Trigger Res_DataManipulation
+on Employee 
+for insert,update,delete
+as
+begin 
+--Declaring a variable to hold the holiday name.
+Declare @Holiday_Name varchar(30)
+--Selecting holiday name from holiday table where the current date matches the holiday date.
+select @Holiday_Name=H_Name from Holiday where CONVERT(date,getdate())=H_date
+--If a holiday name is found
+if(@Holiday_name is not null)
+ --printing changes are restricted and rollback the transaction
+print'Due to' + @Holiday_Name + 'you cannot manipulate data'
+rollback
+end
+--if we are trying to insert these values on holidays then we can't
+insert into Employee values
+(100,'Naman Kudesia','Java Developer',200000,'2024-05-30')
+--drop trigger if exists Res_DataManipulation

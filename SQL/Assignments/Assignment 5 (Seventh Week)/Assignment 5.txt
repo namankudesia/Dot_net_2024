@@ -1,0 +1,77 @@
+--Creating database
+Create Database namankudesia_assignment5
+use namankudesia_assignment5
+--Creating table
+create table employees(
+empno numeric(4) not null,
+ename varchar(40),   
+job varchar(200),   		
+mrg_id numeric(4),   	
+hiredate date,
+sal int,    
+comm int,   
+deptno numeric(2)
+)
+insert into employees(empno,ename,job,mrg_id,hiredate,sal,comm,deptno)
+values
+(7369, 'SMITH', 'CLERK', 7902, '1980-12-17', 800, NULL, 20),
+(7499, 'ALLEN', 'SALESMAN', 7698, '1981-02-20', 1600, 300, 30),
+(7521, 'WARD', 'SALESMAN', 7698, '1981-02-22', 1250, 500, 30),
+(7566, 'JONES', 'MANAGER', 7839, '1981-04-02', 2975, NULL, 20),
+(7654, 'MARTIN', 'SALESMAN', 7698, '1981-09-28', 1250, 1400, 30),
+(7698, 'BLAKE', 'MANAGER', 7839, '1981-05-01', 2850, NULL, 30),
+(7782, 'CLARK', 'MANAGER', 7839, '1981-06-09', 2450, NULL, 10),
+(7788, 'SCOTT', 'ANALYST', 7566, '1987-04-19', 3000, NULL, 20),
+(7839, 'KING', 'PRESIDENT', NULL, '1981-11-17', 5000, NULL, 10),
+(7844, 'TURNER', 'SALESMAN', 7698, '1981-09-08', 1500, 0, 30),
+(7876, 'ADAMS', 'CLERK', 7788, '1987-05-23', 1100, NULL, 20),
+(7900, 'JAMES', 'CLERK', 7698, '1981-12-03', 950, NULL, 30),
+(7902, 'FORD', 'ANALYST', 7566, '1981-12-03', 3000, NULL, 20),
+(7934, 'MILLER', 'CLERK', 7782, '1982-01-23', 1300, NULL, 10)
+select *from employees
+
+--Write a T-Sql based procedure to generate complete payslip of a given employee with respect to 
+--the following condition.
+-- Create or alter procedure to generate payslip for a given employee
+CREATE OR ALTER PROCEDURE Gen_Com_Payslip  
+    @Emp_no int
+AS
+BEGIN
+DECLARE @Salary numeric(10, 2)
+DECLARE @Emp_name varchar(40)
+DECLARE @HRA numeric(10, 2)
+DECLARE @DA numeric(10, 2)
+DECLARE @PF numeric(10, 2)
+DECLARE @IT numeric(10, 2)
+DECLARE @Deduction numeric(10, 2)
+DECLARE @Gross_Salary numeric(10, 2)
+DECLARE @Net_Salary numeric(10, 2)
+    -- Fetch employee details
+SELECT 
+@Salary = sal,
+@Emp_name = ename
+FROM 
+employees 
+WHERE 
+empno = @Emp_no
+    -- Calculate allowances and deductions
+SET @HRA = 0.1 * @Salary
+SET @DA = 0.2 * @Salary
+SET @PF = 0.08 * @Salary
+SET @IT = 0.05 * @Salary
+SET @Deduction = @PF + @IT
+SET @Gross_Salary = @Salary + @HRA + @DA
+SET @Net_Salary = @Gross_Salary - @Deduction
+    -- Print payslip
+PRINT 'Employee Number: ' + CAST(@Emp_no AS varchar(5))
+PRINT 'Employee Name: ' + @Emp_name
+PRINT 'Salary: ' + CAST(@Salary AS varchar(20))
+PRINT 'HRA: ' + CAST(@HRA AS varchar(20))
+PRINT 'DA: ' + CAST(@DA AS varchar(20))
+PRINT 'PF: ' + CAST(@PF AS varchar(20))
+PRINT 'IT: ' + CAST(@IT AS varchar(20))
+PRINT 'Deduction: ' + CAST(@Deduction AS varchar(20))
+PRINT 'Gross Salary: ' + CAST(@Gross_Salary AS varchar(20))
+PRINT 'Net Salary: ' + CAST(@Net_Salary AS varchar(20))
+END
+EXEC Gen_Com_Payslip @Emp_no = 7369;

@@ -1,0 +1,29 @@
+--Q.4 Create table Employee with empno, ename, sal, doj columns and perform the following operations in a single transaction
+Begin transaction
+-- Creating the table
+Create table employee1(empno int primary key,ename varchar(50),
+sal float ,doj date)
+--a. First insert 3 rows 
+-- Inserting values in the table
+Insert into employee1 values
+(0001,'Naman',100000,'2024-05-30'),(0002,'Prateek',20000,'2024-02-15'),
+(0003,'Dhruv', 20000, '2022-01-19')
+select * from employee1
+
+--b. Update the second row sal with 15% increment   
+update employee1
+set sal = (sal + sal * 0.15) where empno = 2
+save tran t1
+select * from employee1
+
+--c. Delete first row
+
+delete from employee1 where empno = 1
+select * from employee1
+rollback tran t1
+
+--commiting the transaction
+commit  
+
+--After completing above all actions how to recall the deleted row without losing increment of second row.
+Select * from employee1 where empno = 1

@@ -1,0 +1,10 @@
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\obj\Debug\EmployeeManagementConsoleApp.csproj.AssemblyReference.cache
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\obj\Debug\EmployeeManagementConsoleApp.csproj.CoreCompileInputs.cache
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\bin\Debug\EmployeeManagementConsoleApp.exe.config
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\bin\Debug\EmployeeManagementConsoleApp.exe
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\bin\Debug\EmployeeManagementConsoleApp.pdb
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\bin\Debug\System.Data.SqlClient.dll
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\bin\Debug\System.Data.SqlClient.xml
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\obj\Debug\EmployeeManagementConsoleApp.csproj.CopyComplete
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\obj\Debug\EmployeeManagementConsoleApp.exe
+D:\Naman's Training\SQL\Assesments\CC2\EmployeeManagementConsoleApp\EmployeeManagementConsoleApp\obj\Debug\EmployeeManagementConsoleApp.pdb

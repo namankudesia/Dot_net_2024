@@ -1,0 +1,28 @@
+create database Employee_Management
+use Employee_Management
+
+create table Employee_Details(Empno int Primary Key, Empname varchar(50) not null,
+Empsal numeric(10,2) check (Empsal >=25000),Emptype char(1) check (Emptype in('F','P')))
+
+Select * from Employee_Details
+
+Create or alter Proc add_Employee
+@Empname varchar(50),
+@Empsal numeric(10, 2),
+@Emptype char(1)
+as
+Begin
+    Declare @Empno int=0;
+	
+   
+   -- Generating EmpNo
+    Select @Empno = (count(Empno)) + 1 from Employee_Details
+
+   -- Insert values into Employee_Details table.
+    insert into Employee_Details(Empno,Empname,Empsal,Emptype)
+	values (@Empno, @Empname, @Empsal, @Emptype)
+End
+
+add_Employee 'Naman', 100000, 'P'
+
+Select * from Employee_Details

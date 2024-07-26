@@ -1,0 +1,7 @@
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\bin\Debug\Assignment1_Naman_LNIQ.exe.config
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\bin\Debug\Assignment1_Naman_LNIQ.exe
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\bin\Debug\Assignment1_Naman_LNIQ.pdb
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\obj\Debug\Assignment1_Naman_LNIQ.csproj.AssemblyReference.cache
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\obj\Debug\Assignment1_Naman_LNIQ.csproj.CoreCompileInputs.cache
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\obj\Debug\Assignment1_Naman_LNIQ.exe
+D:\Naman's Training\LNIQ\Assignment1_Naman_LNIQ\Assignment1_Naman_LNIQ\obj\Debug\Assignment1_Naman_LNIQ.pdb

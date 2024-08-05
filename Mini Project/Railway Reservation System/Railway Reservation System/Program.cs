@@ -10,152 +10,118 @@ namespace Railway_Reservation_System
         {
             using (var context = new RailwayContextData())
             {
-                SeedDatabase(context);
-                Console.WriteLine("Welcome to Railway Reservation System");
-                Console.WriteLine("1. Admin Login");
-                Console.WriteLine("2. User Login");
-                Console.Write("Choose an option: ");
-                string choice = Console.ReadLine();
-                if (choice == "1")
+                while (true)
                 {
-                    AdminLogin(context);
+                    Console.WriteLine("1. Admin Login");
+                    Console.WriteLine("2. User Login");
+                    Console.WriteLine("3. Exit");
+                    Console.Write("Select an option: ");
+                    var option = Console.ReadLine();
+
+                    switch (option)
+                    {
+                        case "1":
+                            AdminLogin(context);
+                            break;
+                        case "2":
+                            UserLogin(context);
+                            break;
+                        case "3":
+                            return;
+                        default:
+                            Console.WriteLine("Invalid option.");
+                            break;
+                    }
                 }
-                else if (choice == "2")
-                {
-                    UserLogin(context);
-                }
-                else
-                {
-                    Console.WriteLine("Invalid option.");
-                }
-            }
-        }
-        static void SeedDatabase(RailwayContextData context)
-        {
-            if (!context.Trains.Any())
-            {
-                context.Trains.AddRange(new[]
-                {
-                    new Train { Train_No = 1221, Train_Name = "VandeBharath", Source_Station = "Chennai", Destination_Station = "Bangalore", Price = 234, class_of_travel = "2AC", train_status = "inactive", seat_available = 120 },
-                    new Train { Train_No = 14543, Train_Name = "Rajdhani Express", Source_Station = "Chennai", Destination_Station = "Delhi", Price = 350, class_of_travel = "1AC", train_status = "active", seat_available = 24 },
-                    new Train { Train_No = 14543, Train_Name = "Rajdhani Express", Source_Station = "Chennai", Destination_Station = "Delhi", Price = 300, class_of_travel = "2AC", train_status = "active", seat_available = 54 }
-                });
-                context.SaveChanges();
-            }
-            if (!context.Users.Any())
-            {
-                context.Users.AddRange(new[]
-                {
-                    new Users { User_Name = "admin", Password = "admin123", role = "admin" },
-                    new Users { User_Name = "user", Password = "user123", role = "user" }
-                });
-                context.SaveChanges();
             }
         }
         static void AdminLogin(RailwayContextData context)
         {
-            Console.Write("Enter Admin Username: ");
-            string username = Console.ReadLine();
-            Console.Write("Enter Admin Password: ");
-            string password = Console.ReadLine();
+            Console.Write("Enter username: ");
+            var username = Console.ReadLine();
+            Console.Write("Enter password: ");
+            var password = Console.ReadLine();
 
-            var admin = context.Users.FirstOrDefault(u => u.User_Name == username && u.Password == password && u.role == "admin");
+            var user = context.Users.FirstOrDefault(u => u.User_Name == username && u.Password == password && u.role == "admin");
 
-            if (admin != null)
+            if (user != null)
             {
-                Console.WriteLine("Admin logged in successfully.");
-                AdminFunctions(context);
+                while (true)
+                {
+                    Console.WriteLine("1. Add New Train");
+                    Console.WriteLine("2. View All Trains");
+                    Console.WriteLine("3. View Bookings");
+                    Console.WriteLine("4. View Cancellations");
+                    Console.WriteLine("5. Logout");
+                    Console.Write("Select an option: ");
+                    var option = Console.ReadLine();
+
+                    switch (option)
+                    {
+                        case "1":
+                            AddNewTrain(context);
+                            break;
+                        case "2":
+                            ViewAllTrains(context);
+                            break;
+                        case "3":
+                            ViewBookings(context);
+                            break;
+                        case "4":
+                            ViewCancellations(context);
+                            break;
+                        case "5":
+                            return;
+                        default:
+                            Console.WriteLine("Invalid option.");
+                            break;
+                    }
+                }
             }
             else
             {
-                Console.WriteLine("Invalid admin credentials.");
+                Console.WriteLine("Invalid credentials.");
             }
         }
         static void UserLogin(RailwayContextData context)
         {
-            Console.Write("Enter Username: ");
-            string username = Console.ReadLine();
-            Console.Write("Enter Password: ");
-            string password = Console.ReadLine();
+            Console.Write("Enter username: ");
+            var username = Console.ReadLine();
+            Console.Write("Enter password: ");
+            var password = Console.ReadLine();
             var user = context.Users.FirstOrDefault(u => u.User_Name == username && u.Password == password && u.role == "user");
             if (user != null)
             {
-                Console.WriteLine("User logged in successfully.");
-                UserFunctions(context, user.User_ID);
+                while (true)
+                {
+                    Console.WriteLine("1. Check Train Availability");
+                    Console.WriteLine("2. Book Tickets");
+                    Console.WriteLine("3. Cancel Tickets");
+                    Console.WriteLine("4. Logout");
+                    Console.Write("Select an option: ");
+                    var option = Console.ReadLine();
+                    switch (option)
+                    {
+                        case "1":
+                            CheckTrainAvailability(context);
+                            break;
+                        case "2":
+                            BookTickets(context, user.User_ID);
+                            break;
+                        case "3":
+                            CancelTickets(context, user.User_ID);
+                            break;
+                        case "4":
+                            return;
+                        default:
+                            Console.WriteLine("Invalid option.");
+                            break;
+                    }
+                }
             }
             else
             {
-                Console.WriteLine("Invalid user credentials.");
-            }
-        }
-        static void AdminFunctions(RailwayContextData context)
-        {
-            Console.WriteLine("Admin Functions");
-            Console.WriteLine("1. View All Trains");
-            Console.WriteLine("2. Add New Train");
-            Console.WriteLine("3. View Bookings");
-            Console.WriteLine("4. View Cancellations");
-            Console.Write("Choose an option: ");
-            string choice = Console.ReadLine();
-            if (choice == "1")
-            {
-                ViewAllTrains(context);
-                Console.ReadLine();
-            }
-            else if (choice == "2")
-            {
-                AddNewTrain(context);
-                Console.ReadLine();
-            }
-            else if (choice == "3")
-            {
-                ViewBookings(context);
-                Console.ReadLine();
-            }
-            else if (choice == "4")
-            {
-                ViewCancellations(context);
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("Invalid option.");
-                Console.ReadLine();
-            }
-        }
-        static void UserFunctions(RailwayContextData context, int userId)
-        {
-            Console.WriteLine("User Functions");
-            Console.WriteLine("1. View All Trains");
-            Console.WriteLine("2. Check Train Availability");
-            Console.WriteLine("3. Book Tickets");
-            Console.WriteLine("4. Cancel Tickets");
-            Console.Write("Choose an option: ");
-            string choice = Console.ReadLine();
-            if (choice == "1")
-            {
-                ViewAllTrains(context);
-                Console.Read();
-            }
-            else if (choice == "2")
-            {
-                CheckTrainAvailability(context);
-                Console.ReadLine();
-            }
-            else if (choice == "3")
-            {
-                BookTickets(context, userId);
-                Console.ReadLine();
-            }
-            else if (choice == "4")
-            {
-                CancelTickets(context, userId);
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("Invalid option.");
-                Console.ReadLine();
+                Console.WriteLine("Invalid credentials.");
             }
         }
         static void ViewAllTrains(RailwayContextData context)
@@ -168,43 +134,43 @@ namespace Railway_Reservation_System
         }
         public static void AddNewTrain(RailwayContextData context)
         {
-                Console.Write("Enter Train Number: ");
+            Console.Write("Enter Train Number: ");
             int trainNo;
-            if(!int.TryParse(Console.ReadLine(), out trainNo)|| trainNo<=0)
+            if (!int.TryParse(Console.ReadLine(), out trainNo) || trainNo <= 0)
             {
                 Console.WriteLine("Invalid Train Number");
                 return;
             }
-                Console.Write("Enter Train Name: ");
-                string trainName = Console.ReadLine();
-                Console.Write("Enter Source Station: ");
-                string sourceStation = Console.ReadLine();
-                Console.Write("Enter Destination Station: ");
-                string destinationStation = Console.ReadLine();
-                Console.Write("Enter Price: ");
-                int price = int.Parse(Console.ReadLine());
-                Console.Write("Enter Class of Travel: ");
-                string classOfTravel = Console.ReadLine();
-                Console.Write("Enter Train Status: ");
-                string trainStatus = Console.ReadLine();
-                Console.Write("Enter Seats Available: ");
-                int seatsAvailable = int.Parse(Console.ReadLine());
-                var newTrain = new Train
-                {
-                    Train_No = trainNo,
-                    Train_Name = trainName,
-                    Source_Station = sourceStation,
-                    Destination_Station = destinationStation,
-                    Price = price,
-                    class_of_travel = classOfTravel,
-                    train_status = trainStatus,
-                    seat_available = seatsAvailable
-                };
-                context.Trains.Add(newTrain);
-                context.SaveChanges();
+            Console.Write("Enter Train Name: ");
+            string trainName = Console.ReadLine();
+            Console.Write("Enter Source Station: ");
+            string sourceStation = Console.ReadLine();
+            Console.Write("Enter Destination Station: ");
+            string destinationStation = Console.ReadLine();
+            Console.Write("Enter Price: ");
+            int price = int.Parse(Console.ReadLine());
+            Console.Write("Enter Class of Travel: ");
+            string classOfTravel = Console.ReadLine();
+            Console.Write("Enter Train Status: ");
+            string trainStatus = Console.ReadLine();
+            Console.Write("Enter Seats Available: ");
+            int seatsAvailable = int.Parse(Console.ReadLine());
+            var newTrain = new Train
+            {
+                Train_No = trainNo,
+                Train_Name = trainName,
+                Source_Station = sourceStation,
+                Destination_Station = destinationStation,
+                Price = price,
+                class_of_travel = classOfTravel,
+                train_status = trainStatus,
+                seat_available = seatsAvailable
+            };
+            context.Trains.Add(newTrain);
+            context.SaveChanges();
 
-                Console.WriteLine("New train added successfully.");
-            }
+            Console.WriteLine("New train added successfully.");
+        }
         static void ViewBookings(RailwayContextData context)
         {
             var bookings = context.Bookings.ToList();

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        #output {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .result {
+            padding: 10px;
+            border-radius: 5px;
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .even {
+            background-color: #a3d9a5;
+            color: #004d00;
+        }
+        .odd {
+            background-color: #f9a5a5;
+            color: #660000;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+            button:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <h2>Odd or Even Checker</h2>
+    <button onclick="checkOddEven()">Check Numbers</button>
+    <div id="output"></div>
+    <script>
+        function checkOddEven() {
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+            for (var i = 0; i <= 15; i++) {
+                var message = i + ' is ' + (i % 2 === 0 ? 'even' : 'odd');
+                var para = document.createElement('p');
+                para.textContent = message;
+                para.className = 'result ' + (i % 2 === 0 ? 'even' : 'odd');
+                outputDiv.appendChild(para);
+            }
+        }
+    </script>
+</body>
+</html>

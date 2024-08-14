@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "GetCustomerByOrderId";
+}
+
+<h2>GetCustomerByOrderId</h2>
+
+@model Namanques1.Models.Customer
+
+<h2>Customer Details</h2>
+
+<table>
+    <tr>
+        <td>Customer ID:</td>
+        <td>@Model.CustomerID</td>
+    </tr>
+    <tr>
+        <td>Company Name:</td>
+        <td>@Model.CompanyName</td>
+    </tr>
+    <tr>
+        <td>Contact Name:</td>
+        <td>@Model.ContactName</td>
+    </tr>
+    <tr>
+        <td>Country:</td>
+        <td>@Model.Country</td>
+    </tr>
+</table>

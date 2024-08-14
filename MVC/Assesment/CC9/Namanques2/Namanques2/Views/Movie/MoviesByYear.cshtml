@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
+@model IEnumerable<Namanques2.Models.Movie>
+
+@{
+    ViewBag.Title = "Movies by Year";
+}
+
+<h2>Movies Released in @Request.QueryString["year"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Date of Release</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Moviename</td>
+                <td>@movie.DateofRelease.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Naman\u0027s Training\\Web API\\Assesment\\CC10\\CountryApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ACBE7C20-A028-4805-AB6A-229269557297}|CountryApi\\CountryApi.csproj|d:\\naman\u0027s training\\web api\\assesment\\cc10\\countryapi\\countryapi\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACBE7C20-A028-4805-AB6A-229269557297}|CountryApi\\CountryApi.csproj|solutionrelative:countryapi\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ACBE7C20-A028-4805-AB6A-229269557297}|CountryApi\\CountryApi.csproj|d:\\naman\u0027s training\\web api\\assesment\\cc10\\countryapi\\countryapi\\models\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACBE7C20-A028-4805-AB6A-229269557297}|CountryApi\\CountryApi.csproj|solutionrelative:countryapi\\models\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "D:\\Naman\u0027s Training\\Web API\\Assesment\\CC10\\CountryApi\\CountryApi\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "CountryApi\\Controllers\\CountryController.cs",
+              "ToolTip": "D:\\Naman\u0027s Training\\Web API\\Assesment\\CC10\\CountryApi\\CountryApi\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "CountryApi\\Controllers\\CountryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:42:23.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Country.cs",
+              "DocumentMoniker": "D:\\Naman\u0027s Training\\Web API\\Assesment\\CC10\\CountryApi\\CountryApi\\Models\\Country.cs",
+              "RelativeDocumentMoniker": "CountryApi\\Models\\Country.cs",
+              "ToolTip": "D:\\Naman\u0027s Training\\Web API\\Assesment\\CC10\\CountryApi\\CountryApi\\Models\\Country.cs",
+              "RelativeToolTip": "CountryApi\\Models\\Country.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T04:40:25.881Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
